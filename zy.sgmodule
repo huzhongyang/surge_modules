@@ -1,2 +1,43 @@
 #!name=zy config
 #!desc=my config
+[General]
+ipv6 = true
+ipv6-vif = auto
+test-timeout = 5
+loglevel = notify
+always-real-ip = *
+
+# DNS
+# 腾讯: 119.29.29.29
+#       2402:4e00::
+# 阿里: 223.5.5.5 , 223.6.6.6
+#       2400:3200::1 , 2400:3200:baba::1
+# 百度: 180.76.76.76
+# 谷歌: 8.8.8.8 , 8.8.4.4
+#       2001:4860:4860::8888 , 2001:4860:4860::8844
+# Cloudfare: 1.1.1.1 , 1.0.0.1
+#       2606:4700:4700::1111 , 2606:4700:4700::1001
+# ADGuard: 94.140.14.14 , 94.140.15.15
+#       2a10:50c0::ad1:ff , 2a10:50c0::ad2:ff
+dns-server = 119.29.29.29, 2402:4e00::, 223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1, 180.76.76.76, 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844, 1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001, 94.140.14.14, 94.140.15.15, 2a10:50c0::ad1:ff, 2a10:50c0::ad2:ff, 114.114.114.114
+
+# DoH地址：
+# 默认服务器：https://dns.adguard.com/dns-query
+# 家庭保护服务器：https://dns-family.adguard.com/dns-query
+# 非过滤服务器：https://dns-unfiltered.adguard.com/dns-query
+# https://dns.ipv6dns.com/dns-query
+# DNS-over-QUIC地址：
+# 默认服务器：quic://dns.adguard.com
+# 家庭保护服务器：quic://dns-family.adguard.com
+# 非过滤服务器：quic://dns-unfiltered.adguard.com
+encrypted-dns-server = https://dns.ipv6dns.com/dns-query
+
+doh-follow-outbound-mode = true
+use-local-host-item-for-proxy = false
+
+[Rule]
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/direct.txt,🎯 全球直连
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,🎯 全球直连
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,🎯 全球直连
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt,🎯 全球直连
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,🎯 全球直连
