@@ -30,7 +30,7 @@ dns-server = 119.29.29.29, 2402:4e00::, 223.5.5.5, 223.6.6.6, 2400:3200::1, 2400
 # 家庭保护服务器：quic://dns-family.adguard.com
 # 非过滤服务器：quic://dns-unfiltered.adguard.com
 # 国内: https://dns.ipv6dns.com/dns-query
-encrypted-dns-server = https://dns.ipv6dns.com/dns-query
+encrypted-dns-server = quic://dns.adguard.com
 
 doh-follow-outbound-mode = true
 use-local-host-item-for-proxy = false
