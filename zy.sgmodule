@@ -5,7 +5,6 @@ ipv6 = true
 ipv6-vif = auto
 test-timeout = 5
 loglevel = notify
-always-real-ip = *
 
 # DNS
 # 腾讯: 119.29.29.29
@@ -30,15 +29,41 @@ dns-server = 119.29.29.29, 2402:4e00::, 223.5.5.5, 223.6.6.6, 2400:3200::1, 2400
 # 家庭保护服务器：quic://dns-family.adguard.com
 # 非过滤服务器：quic://dns-unfiltered.adguard.com
 # 国内: https://dns.ipv6dns.com/dns-query
-# encrypted-dns-server = quic://dns.adguard.com
+encrypted-dns-server = quic://832975bb.d.adguard-dns.com, https://d.adguard-dns.com/dns-query/832975bb
 
 doh-follow-outbound-mode = true
 use-local-host-item-for-proxy = false
 
 [Rule]
-# DOMAIN-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,REJECT
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/direct.txt,DIRECT
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,DIRECT
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,DIRECT
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/cncidr.txt,DIRECT
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,xray,DIRECT
+PROCESS-NAME,clash,DIRECT
+PROCESS-NAME,naive,DIRECT
+PROCESS-NAME,trojan,DIRECT
+PROCESS-NAME,trojan-go,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+PROCESS-NAME,privoxy,DIRECT
+PROCESS-NAME,leaf,DIRECT
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,DownloadService,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,fdm,DIRECT
+PROCESS-NAME,aria2c,DIRECT
+PROCESS-NAME,Folx,DIRECT
+PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
+PROCESS-NAME,WebTorrent,DIRECT
+RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge2.txt,REJECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/private.txt,DIRECT
+RULE-SET,SYSTEM,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/icloud.txt,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/apple.txt,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/google.txt,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/direct.txt,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt,DIRECT
+RULE-SET,LAN,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/proxy.txt,Proxy
+FINAL,Proxy,dns-failed
