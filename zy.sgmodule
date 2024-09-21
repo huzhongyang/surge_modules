@@ -35,7 +35,15 @@ use-local-host-item-for-proxy=true
 
 [Rule]
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/download.conf,DIRECT
+RULE-SET,https://ruleset.skk.moe/List/non_ip/download.conf,DIRECT
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,xray,DIRECT
 PROCESS-NAME,clash,DIRECT
