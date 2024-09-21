@@ -42,8 +42,6 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
-DOMAIN,download-cdn.jetbrains.com,DIRECT
-DOMAIN,downloads.marketplace.jetbrains.com,DIRECT
 PROCESS-NAME,v2ray,DIRECT
 PROCESS-NAME,xray,DIRECT
 PROCESS-NAME,clash,DIRECT
