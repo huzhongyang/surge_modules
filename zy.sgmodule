@@ -34,6 +34,8 @@ encrypted-dns-follow-outbound-mode=true
 use-local-host-item-for-proxy=true
 
 [Rule]
+DOMAIN-SUFFIX,bolt.new,Proxy
+
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,extended-matching
