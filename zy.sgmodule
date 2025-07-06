@@ -34,7 +34,7 @@ encrypted-dns-follow-outbound-mode=true
 use-local-host-item-for-proxy=true
 
 [Rule]
-DOMAIN,diabrowser.engineering,fallback    # Dia Browser
+DOMAIN-SUFFIX,diabrowser.engineering,fallback    # Dia Browser
 
 RULE-SET,https://ruleset.skk.moe/List/non_ip/ai.conf,fallback,extended-matching
 
