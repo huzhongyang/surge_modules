@@ -38,7 +38,7 @@ DOMAIN-SUFFIX,diabrowser.engineering,fallback    # Dia Browser
 
 RULE-SET,https://ruleset.skk.moe/List/non_ip/ai.conf,fallback,extended-matching
 
-DOMAIN-SUFFIX,bolt.new,Proxy
+DOMAIN-SUFFIX,bolt.new,smart
 
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
@@ -76,6 +76,6 @@ RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/di
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/cncidr.txt,DIRECT
 RULE-SET,LAN,DIRECT
 
-RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,Proxy
-RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/proxy.txt,Proxy
-FINAL,Proxy,dns-failed
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,smart
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/smart.txt,smart
+FINAL,smart,dns-failed
