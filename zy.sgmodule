@@ -29,9 +29,6 @@ dns-server = 119.29.29.29, 2402:4e00::, 223.5.5.5, 223.6.6.6, 2400:3200::1, 2400
 # 家庭保护服务器：quic://dns-family.adguard.com
 # 非过滤服务器：quic://dns-unfiltered.adguard.com
 # 国内: https://dns.ipv6dns.com/dns-query
-encrypted-dns-follow-outbound-mode=true
-
-use-local-host-item-for-proxy=true
 
 [Rule]
 DOMAIN-SUFFIX,diabrowser.engineering,fallback    # Dia Browser
@@ -40,7 +37,6 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/ai.conf,fallback,extended-matching
 
 DOMAIN-SUFFIX,bolt.new,smart
 
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising_All.list,REJECT
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/reject.txt,REJECT
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,extended-matching
